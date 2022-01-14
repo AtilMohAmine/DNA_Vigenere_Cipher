@@ -6,7 +6,7 @@ information.<br><p align="center">
 
 ## Encryption
 #### Step 1: Transfom the text to binary
-Each character of the text will converted to 8-bit binary. But the lenght of the text must be multiple by 3, Because it will be converted to DNA Bases and next to DNA Codons.
+Each character of the text will be converted to 8-bit binary. But the lenght of the text must be multiple by 3, Because it will be converted to DNA Bases and next to DNA Codons.
 This part of code will check that, and add character '**X**' to fill the void:
  ```java
 while((msg.length() % 3) != 0) {
