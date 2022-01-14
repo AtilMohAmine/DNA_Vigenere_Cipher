@@ -10,7 +10,7 @@ Each character of the text will be converted to 8-bit binary. But the lenght of 
 This part of code will check that, and add character '**X**' to fill the void:
  ```java
 while((msg.length() % 3) != 0) {
-            msg += "X";
+    msg += "X";
 }
 ```
 > E.g. "Hi" will be "HiX" then will be 01001000 01101001 01011000
@@ -52,7 +52,7 @@ The plaintext(**P**) and key(**K**)
 This part of code implements the equation:
 ```java
 for(int i = 0; i < msg.length(); i++) 
-	encryptedMsg += (char) (((msg.charAt(i) + key.charAt(i % key.length())) % 26) + 'A');
+    encryptedMsg += (char) (((msg.charAt(i) + key.charAt(i % key.length())) % 26) + 'A');
 ```
 
 > E.g. Encryption of "QBTDABRC" with the key "**pizza**" will be "FJSCAQZB"<br>
@@ -71,7 +71,7 @@ Now it's easy to get the DNA Codos simply by calling<code>AminoAcidTable.get(**K
 This part of code implements that:
 ```java
 for(int i = 0; i < msg.length(); i += 2) {
-	dnaMsg += AminoAcidTable.get(msg.substring(i, i+1)).get((int) (msg.charAt(i+1) - 'A'));
+    dnaMsg += AminoAcidTable.get(msg.substring(i, i+1)).get((int) (msg.charAt(i+1) - 'A'));
 }
 ```
 
