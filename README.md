@@ -3,6 +3,7 @@ The DNA-based cryptography is a new and very promising direction in cryptography
 information.<br><p align="center">
 ![diagram](https://user-images.githubusercontent.com/86023602/149540315-9750648a-0836-4300-9878-7ba912368084.png)
 </p>
+
 ## Encryption
 #### Step 1: Transfom the text to binary
 Each character of the text will converted to 8-bit binary. But the lenght of the text must be multiple by 3, Because it will be converted to DNA Bases and next to DNA Codons.
@@ -29,12 +30,12 @@ The index will be used for the decryption, it is the index of the DNA Codon in t
 This part of code explain how to get the Amino Acid letter code with the index from the HashMap:
 
 ```java
-	for (String key : AminoAcidTable.keySet()) {
-		for(int j = 0; j < AminoAcidTable.get(key).size(); j++) {
-			if(AminoAcidTable.get(key).get(j).equals(dnaCodons))
-				aminoacidMsg += key + (char) (j + 'A');
-		}
-	}
+for (String key : AminoAcidTable.keySet()) {
+    for(int j = 0; j < AminoAcidTable.get(key).size(); j++) {
+	if(AminoAcidTable.get(key).get(j).equals(dnaCodons))
+  	    aminoacidMsg += key + (char) (j + 'A');
+    }
+}
 ```
 The STOP Codons will be converted to character '**Z**'.
 
