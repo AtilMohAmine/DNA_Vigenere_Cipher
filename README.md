@@ -22,6 +22,8 @@ In this step, every couple of two bit will be converted to the one of the DNA Ba
 - 10 will be the base **G**.
 - 11 will be the base **T**.
 
+> E.g. 01001000 01101001 01011000 will be "CAGACGGCCCGA"
+
 #### Step 3: Transform the DNA-Codons to Amino-Acids
 Every DNA Codons will be one of the Amio Acids in the following table with their index. Amino Acids table wil be implemented as<code>HashMap&lt;String, ArrayList&lt;String&gt;&gt;</code>.<br><p align="center">
 ![tablefinal](https://user-images.githubusercontent.com/86023602/149537586-2484dadf-9a67-410c-b970-09be7e732321.png)
@@ -39,6 +41,8 @@ for (String key : AminoAcidTable.keySet()) {
 ```
 The STOP Codons will be converted to character '**Z**'.
 
+> E.g. "CAGACGGCCCGA" will be "QBTDABRC" (Q1T3A1R2)
+
 #### Step 4: Encrypt with Vigenere-Cipher
 Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution.
 The easy implementation could be to visualize Vigenere algebraically by converting [A-Z] into numbers [0–25].
@@ -50,6 +54,9 @@ This part of code implements the equation:
 for(int i = 0; i < msg.length(); i++) 
 	encryptedMsg += (char) (((msg.charAt(i) + key.charAt(i % key.length())) % 26) + 'A');
 ```
+
+> E.g. Encryption of "QBTDABRC" with the key "**pizza**" will be "FJSCAQZB"
+> So "Hi" will be encrypted to "FJSCAQZB"
 
 ## Decryption
 #### Step 1: Decrypt with Vigenere-Cipher
