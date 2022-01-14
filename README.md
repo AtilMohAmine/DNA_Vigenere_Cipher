@@ -1,4 +1,4 @@
-# DNA-Based Data Encryption Using Vigenere Cipher Implemented with JAVA
+# DNA-Based Data Encryption Using Vigenere Cipher Implemented in JAVA
 The DNA-based cryptography is a new and very promising direction in cryptography research, DNA can be used in cryptography for storing and transmitting the
 information.<br><p align="center">
 ![diagram](https://user-images.githubusercontent.com/86023602/149540315-9750648a-0836-4300-9878-7ba912368084.png)
