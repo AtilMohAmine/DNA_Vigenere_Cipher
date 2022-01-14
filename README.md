@@ -13,7 +13,7 @@ while((msg.length() % 3) != 0) {
             msg += "X";
 }
 ```
-> E.g. "HI" will be 01001000 01001001 01011000
+> E.g. "Hi" will be "HiX" then will be 01001000 01101001 01011000
 
 #### Step 2: Transform the binary to DNA-Bases
 In this step, every couple of two bit will be converted to the one of the DNA Bases(A, C, G, T).
