@@ -76,7 +76,7 @@ for(int i = 0; i < msg.length(); i += 2) {
 ```
 
 ### Step 3: Transform from DNA-Codons to Binary
-Each DNA Base will be converted to their binary code as followsز
+Each DNA Base will be converted to their binary code as follows:
 - The base **A** will be 00.
 - The base **C** will be 01.
 - The base **G** will be 10.
